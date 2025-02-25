@@ -3,3 +3,4 @@ src/cpz_citibike.egg-info
 # Ignore compiled Python files
 *.pyc
 __pycache__/
+data/raw_citibike_data/*
