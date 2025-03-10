@@ -120,7 +120,9 @@ def download_files(
     """
     existing_files = get_existing_citibike_files(data_folder)
     downloadable_files = find_all_downloadable_files(url)
-    files_of_interest = find_files_of_interest(downloadable_files, YEAR_FLOOR)
+    files_of_interest = find_files_of_interest(
+        downloadable_files, re_pattern=RE_PATTERN, year_floor=YEAR_FLOOR
+    )
 
     if download_option == "missing":
         files_to_download = [
@@ -130,13 +132,14 @@ def download_files(
         files_to_download = file_names
 
     for file in files_to_download:
+        file_download_path = CITIBIKE_URL_PREFIX + file
         if file in downloadable_files and file not in existing_files:
 
-            file_download_path = CITIBIKE_URL_PREFIX + file
             save_path = os.path.join(RAW_DATA_FOLDER, file)
             print(f"Downloading {file_download_path} to {save_path}")
             download_citibike_file(file_download_path, save_path)
         else:
-            print(
-                f"{file} either not available for download or already in {RAW_DATA_FOLDER}"
-            )
+            if file not in downloadable_files:
+                print(f"{file} not available for download")
+            elif file in existing_files:
+                print(f"{file} already in {RAW_DATA_FOLDER}")
