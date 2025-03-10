@@ -2,8 +2,8 @@
 
 import os
 import re
-import requests
 import zipfile
+import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -159,9 +159,15 @@ def unzip_file_recursive(zip_file_path) -> None:
                 with zipfile.ZipFile(zip_file_path, "r") as zip_ref:
                     print(f"Unzipping {zip_file_path} to {extract_location}")
                     zip_ref.extractall(extract_location)
+            except zipfile.BadZipFile:
+                print("Error: The file is not a valid zip archive.")
+            except FileNotFoundError:
+                print("Error: The zip file was not found.")
+            except PermissionError:
+                print("Error: Permission denied when accessing the file.")
             except Exception as e:
+                print(f"An unexpected error occurred: {e}")
                 print(f"CRITICAL FAILURE: UNABLE TO UNZIP {zip_file_path}")
-                print(e)
 
         else:
             print("File or folder path already exists, unzipping operation passed")
