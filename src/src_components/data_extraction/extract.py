@@ -3,6 +3,7 @@
 import os
 import re
 import requests
+import zipfile
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -22,7 +23,7 @@ def get_existing_citibike_files(folder_path: str = RAW_DATA_FOLDER) -> list:
     Return list of existing data in folder_path
 
     Returns:
-        list of file names
+        list of file paths
     """
 
     zip_files = [
@@ -139,7 +140,37 @@ def download_files(
             print(f"Downloading {file_download_path} to {save_path}")
             download_citibike_file(file_download_path, save_path)
         else:
+
             if file not in downloadable_files:
                 print(f"{file} not available for download")
             elif file in existing_files:
                 print(f"{file} already in {RAW_DATA_FOLDER}")
+
+
+def unzip_file_recursive(zip_file_path) -> None:
+    """Recursively extract zip files within a given zip file"""
+
+    # Unzip current file
+    print(f"Attempting to unzip file at {zip_file_path}")
+    extract_location = zip_file_path.replace(".zip", "")
+    if zip_file_path.endswith(".zip"):
+        if not os.path.isfile(extract_location) and not os.path.isdir(extract_location):
+            try:
+                with zipfile.ZipFile(zip_file_path, "r") as zip_ref:
+                    print(f"Unzipping {zip_file_path} to {extract_location}")
+                    zip_ref.extractall(extract_location)
+            except Exception as e:
+                print(f"CRITICAL FAILURE: UNABLE TO UNZIP {zip_file_path}")
+                print(e)
+
+        else:
+            print("File or folder path already exists, unzipping operation passed")
+
+    # Traverse into new folder
+    if os.path.isdir(extract_location):
+        for item in os.listdir(extract_location):
+            item_path = os.path.join(extract_location, item)
+            if (item.endswith(".zip") and os.path.isfile(item_path)) or (
+                os.path.isdir(item_path) and not "MACOSX" in item_path
+            ):
+                unzip_file_recursive(item_path)
