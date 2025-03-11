@@ -1,6 +1,7 @@
 """Standard fixtures for src.src_components.data_extraction tests"""
 
 import pytest
+from unittest.mock import patch
 
 
 @pytest.fixture(scope="function")
@@ -22,3 +23,34 @@ def re_pattern():
         "re_pattern": r"https://example\.com/\d{6}-citibike-tripdata\.zip",
         "prefix_bound": 20,
     }
+
+
+@pytest.fixture
+def mock_webdriver():
+    """
+    Mock the webdriver.Chrome class. Simulates Selenium
+    """
+    with patch(
+        "src.src_components.data_extraction.extract.webdriver.Chrome"
+    ) as mock_web_driver:
+        yield mock_web_driver
+
+
+@pytest.fixture
+def mock_chrome_service():
+    """
+    Mock the Service class. Simulates Selenium
+    """
+    with patch("src.src_components.data_extraction.extract.Service") as mock_service:
+        yield mock_service
+
+
+@pytest.fixture
+def mock_chrome_driver_manager():
+    """
+    Mock the ChromeDriverManager class. Simulates Selenium
+    """
+    with patch(
+        "src.src_components.data_extraction.extract.ChromeDriverManager"
+    ) as mock_chrome_driver_manager:
+        yield mock_chrome_driver_manager
