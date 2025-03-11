@@ -14,6 +14,7 @@ from src_constants.extract_constants import (
     CITIBIKE_URL,
     RAW_DATA_FOLDER,
     RE_PATTERN,
+    RE_PATTERN_PREFIX_BOUND,
     YEAR_FLOOR,
 )
 
@@ -67,18 +68,24 @@ def find_all_downloadable_files(url: str = CITIBIKE_URL) -> list:
 
 
 def find_files_of_interest(
-    zip_links: list, re_pattern: str = RE_PATTERN, year_floor: int = 0
+    zip_links: list,
+    re_pattern: str = RE_PATTERN,
+    prefix_bound: int = RE_PATTERN_PREFIX_BOUND,
+    year_floor: int = 0,
 ) -> list:
     """Filter available zip files
 
     Args:
         zip_links (list): List of all zip_links at CitiBike URL
         re_pattern (str): RegEx pattern to match files of interest
+        prefix_bound (int): Substring index boundary for when link prefix ends.
         year_floor (int): First year of interest. Files indexed before this year are out-of-bounds.
     Returns:
         list: Filtered list of zip_links *without* link prefix
     """
-    filtered_links = [link[34:] for link in zip_links if re.match(re_pattern, link)]
+    filtered_links = [
+        link[prefix_bound:] for link in zip_links if re.match(re_pattern, link)
+    ]
     year_bounded_links = [
         link for link in filtered_links if int(link[:4]) >= year_floor
     ]
@@ -122,7 +129,10 @@ def download_files(
     existing_files = get_existing_citibike_files(data_folder)
     downloadable_files = find_all_downloadable_files(url)
     files_of_interest = find_files_of_interest(
-        downloadable_files, re_pattern=RE_PATTERN, year_floor=YEAR_FLOOR
+        downloadable_files,
+        re_pattern=RE_PATTERN,
+        prefix_bound=RE_PATTERN_PREFIX_BOUND,
+        year_floor=YEAR_FLOOR,
     )
 
     if download_option == "missing":
