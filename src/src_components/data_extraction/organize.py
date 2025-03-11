@@ -90,7 +90,7 @@ def reorganize_month_files(root_dir: str = RAW_DATA_FOLDER) -> None:
         shutil.move(os.path.join(root_dir, folder), year_folder)
 
 
-def cleanup_and_organize(root_dir):
+def cleanup_and_organize(root_dir: str = RAW_DATA_FOLDER):
     """Execute series of organization steps for extracted files
 
     Args:
