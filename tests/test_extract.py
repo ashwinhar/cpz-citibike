@@ -1,9 +1,12 @@
+"""Tests for src.src_components.data_extraction.extract.py"""
+
 import pytest
 from src_components.data_extraction.extract import find_files_of_interest
 
 
 @pytest.fixture
 def sample_zip_links():
+    """Generate sample zip_links"""
     return [
         "https://example.com/202101-citibike-tripdata.zip",
         "https://example.com/202102-citibike-tripdata.zip",
@@ -15,6 +18,7 @@ def sample_zip_links():
 
 def test_find_files_of_interest(sample_zip_links):
     re_pattern = r"https://example\.com/\d{6}-citibike-tripdata\.zip"
+    prefix_bound = 20
     year_floor = 2020
 
     expected_files = [
@@ -23,7 +27,9 @@ def test_find_files_of_interest(sample_zip_links):
         "202001-citibike-tripdata.zip",
     ]
 
-    result = find_files_of_interest(sample_zip_links, re_pattern, year_floor)
+    result = find_files_of_interest(
+        sample_zip_links, re_pattern, prefix_bound, year_floor
+    )
     assert result == expected_files
 
 
