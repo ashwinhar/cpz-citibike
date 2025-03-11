@@ -175,9 +175,6 @@ def unzip_file_recursive(zip_file_path) -> None:
                 print("Error: The zip file was not found.")
             except PermissionError:
                 print("Error: Permission denied when accessing the file.")
-            except Exception as e:
-                print(f"An unexpected error occurred: {e}")
-                print(f"CRITICAL FAILURE: UNABLE TO UNZIP {zip_file_path}")
 
         else:
             print("File or folder path already exists, unzipping operation passed")
