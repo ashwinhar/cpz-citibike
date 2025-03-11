@@ -5,3 +5,4 @@ src/cpz_citibike.egg-info
 __pycache__/
 data/raw_citibike_data/*
 nbs/sandbox.ipynb
+sample_data
