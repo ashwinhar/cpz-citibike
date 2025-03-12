@@ -1,7 +1,7 @@
 """Standard fixtures for src.src_components.data_extraction tests"""
 
-import pytest
 from unittest.mock import patch
+import pytest
 
 
 @pytest.fixture(scope="function")
@@ -52,5 +52,86 @@ def mock_chrome_driver_manager():
     """
     with patch(
         "src.src_components.data_extraction.extract.ChromeDriverManager"
-    ) as mock_chrome_driver_manager:
-        yield mock_chrome_driver_manager
+    ) as mock_driver_manager:
+        yield mock_driver_manager
+
+
+@pytest.fixture
+def mock_get_existing_citibike_files():
+    """
+    Mock get_existing_citibike_files() function from extract.py
+    """
+    with patch(
+        "src.src_components.data_extraction.extract.get_existing_citibike_files"
+    ) as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_find_all_downloadable_files():
+    """
+    Mock find_all_downloadable_files() function from extract.py
+    """
+    with patch(
+        "src.src_components.data_extraction.extract.find_all_downloadable_files"
+    ) as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_find_files_of_interest():
+    """
+    Mock find_files_of_interest() function from extract.py
+    """
+    with patch(
+        "src.src_components.data_extraction.extract.find_files_of_interest"
+    ) as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_download_citibike_file():
+    """
+    Mock download_citibike_file() function from extract.py
+    """
+    with patch("src_components.data_extraction.extract.download_citibike_file") as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_os_path():
+    """
+    Mock os.path()
+    """
+    with patch("src_components.data_extraction.extract.os.path") as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_os_listdir():
+    """
+    Mock os.listdir()
+    """
+    with patch("src_components.data_extraction.extract.os.listdir") as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_zipfile():
+    """
+    Mock zipfile.ZipFile
+    """
+    with patch("src_components.data_extraction.extract.zipfile.ZipFile") as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_os_rmdir():
+    with patch("src_components.data_extraction.organize.os.rmdir") as mock:
+        yield mock
+
+
+@pytest.fixture
+def mock_shutil_move():
+    with patch("src_components.data_extraction.organize.shutil.move") as mock:
+        yield mock
