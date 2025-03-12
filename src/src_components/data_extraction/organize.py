@@ -1,5 +1,6 @@
 """Organize extracted files"""
 
+from datetime import datetime
 import os
 import shutil
 import re
@@ -99,3 +100,52 @@ def cleanup_and_organize(root_dir: str = RAW_DATA_FOLDER):
     remove_redundant_subfolders(root_dir)
     relocate_zip_files(root_dir)
     reorganize_month_files(root_dir)
+
+
+def find_month_folders(root_dir: str = RAW_DATA_FOLDER):
+    """Find all month folders in the root directory
+
+    List all month folders, find missing months in previous years, and detect duplicate months
+
+    Args:
+        root_dir (str) - Directory containing all data files to process
+    Returns:
+        month_folders (list) - List of month folders found
+        missing_months (dict) - Dictionary of missing months in previous years
+        duplicate_months (dict) - Dictionary of duplicate months
+    """
+    month_folders = []
+    missing_months = {}
+    duplicate_months = {}
+    current_year = datetime.now().year
+
+    # Walk through all directories and subdirectories
+    for root, dirs, files in os.walk(root_dir):
+        for directory in dirs:
+            # Check if the folder name starts with YYYYMM
+            match = re.match(r"^(\d{6})", directory)
+            if match:
+                month_folders.append(os.path.join(root, directory))
+
+    # Organizing found months by year
+    year_months = {}
+    month_occurrences = {}
+    for path in month_folders:
+        folder_name = os.path.basename(path)
+        year, month = int(folder_name[:4]), int(folder_name[4:6])
+        year_months.setdefault(year, set()).add(month)
+        month_occurrences.setdefault((year, month), []).append(path)
+
+    # Checking for missing months in previous years
+    for year, months in year_months.items():
+        if year < current_year:
+            missing = set(range(1, 13)) - months
+            if missing:
+                missing_months[year] = sorted(missing)
+
+    # Checking for duplicate month folders
+    for (year, month), paths in month_occurrences.items():
+        if len(paths) > 1:
+            duplicate_months[(year, month)] = paths
+
+    return month_folders, missing_months, duplicate_months
