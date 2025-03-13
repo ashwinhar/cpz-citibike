@@ -7,3 +7,4 @@ data/raw_citibike_data/*
 nbs/sandbox.ipynb
 sample_data
 src/src_components/logs/dbt.log
+src/src_components/data_transform/dev.duckdb
