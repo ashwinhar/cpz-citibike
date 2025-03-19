@@ -73,6 +73,8 @@ def create_all_tables() -> None:
     """
     Create all tables from .csv files in the data folder
     """
+    create_schema(get_database_connection(), "staging")
+
     month_folders, missing_months, duplicate_months = find_month_folders()
     if len(missing_months) != 0 or len(duplicate_months) != 0:
         if missing_months is not None:
@@ -92,5 +94,5 @@ def create_all_tables() -> None:
                     create_table(
                         con,
                         pd.read_csv(os.path.join(month, file)),
-                        f'staging_2025."{renamed_file}"',
+                        f'staging."{renamed_file}"',
                     )
