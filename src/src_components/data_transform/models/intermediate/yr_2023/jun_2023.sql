@@ -3,6 +3,7 @@ select * from
 UNION ALL 
 select * from {{ source('staging_2023', '202306_citibike_tripdata_2') }}
 UNION ALL 
-select * from {{ source('staging_2023', '202306_citibike_tripdata_3') }}
+select * from {{ source('staging_2023', '202306_citibike_tripdata_3'
+) }}
 UNION ALL 
 select * from {{ source('staging_2023', '202306_citibike_tripdata_4') }}
