@@ -1,12 +1,12 @@
 version: 2
 
 sources: 
-  - name: staging_2020
+  - name: staging_2021
     description: Raw .csv files from CitiBike
     database: dev
     schema: staging
     tables:
-      - name: 202001_citibike_tripdata_1
+      - name: 202101_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -35,7 +35,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202001_citibike_tripdata_2
+      - name: 202101_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -64,7 +64,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202002_citibike_tripdata_1
+      - name: 202102_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -93,7 +93,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202002_citibike_tripdata_2
+      - name: 202103_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -122,7 +122,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202003_citibike_tripdata_1
+      - name: 202103_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -151,7 +151,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202003_citibike_tripdata_2
+      - name: 202104_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -180,7 +180,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202004_citibike_tripdata_1
+      - name: 202104_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -209,7 +209,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202005_citibike_tripdata_1
+      - name: 202104_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -238,7 +238,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202005_citibike_tripdata_2
+      - name: 202105_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -267,7 +267,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202006_citibike_tripdata_1
+      - name: 202105_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -296,7 +296,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202006_citibike_tripdata_2
+      - name: 202105_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -325,7 +325,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202007_citibike_tripdata_1
+      - name: 202106_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -354,7 +354,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202007_citibike_tripdata_2
+      - name: 202106_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -383,7 +383,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202007_citibike_tripdata_3
+      - name: 202106_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -412,7 +412,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202008_citibike_tripdata_1
+      - name: 202106_citibike_tripdata_4
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -441,7 +441,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202008_citibike_tripdata_2
+      - name: 202107_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -470,7 +470,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202008_citibike_tripdata_3
+      - name: 202107_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -499,7 +499,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202009_citibike_tripdata_1
+      - name: 202107_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -528,7 +528,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202009_citibike_tripdata_2
+      - name: 202107_citibike_tripdata_4
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -557,7 +557,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202009_citibike_tripdata_3
+      - name: 202108_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -586,7 +586,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202010_citibike_tripdata_1
+      - name: 202108_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -615,7 +615,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202010_citibike_tripdata_2
+      - name: 202108_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -644,7 +644,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202010_citibike_tripdata_3
+      - name: 202108_citibike_tripdata_4
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -673,7 +673,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202011_citibike_tripdata_1
+      - name: 202109_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -702,7 +702,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202011_citibike_tripdata_2
+      - name: 202109_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -731,7 +731,7 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202012_citibike_tripdata_1
+      - name: 202109_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id
@@ -760,7 +760,268 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
-      - name: 202012_citibike_tripdata_2
+      - name: 202109_citibike_tripdata_4
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202110_citibike_tripdata_1
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202110_citibike_tripdata_2
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202110_citibike_tripdata_3
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202110_citibike_tripdata_4
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202111_citibike_tripdata_1
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202111_citibike_tripdata_2
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202111_citibike_tripdata_3
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202112_citibike_tripdata_1
+        description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+        columns:
+          - name: ride_id
+            description: "{{ doc('col_ride_id')}}"
+          - name: rideable_type
+            description: "{{ doc('col_rideable_type')}}"
+          - name: started_at
+            description: "{{ doc('col_started_at')}}"
+          - name: ended_at
+            description: "{{ doc('col_ended_at')}}"
+          - name: start_station_name
+            description: "{{ doc('col_start_station_name')}}"
+          - name: start_station_id
+            description: "{{ doc('col_start_station_id')}}"
+          - name: end_station_name
+            description: "{{ doc('col_end_station_name')}}"
+          - name: end_station_id
+            description: "{{ doc('col_end_station_id')}}"
+          - name: start_lat
+            description: "{{ doc('col_start_lat')}}"
+          - name: start_lng
+            description: "{{ doc('col_start_lng')}}"
+          - name: end_lat
+            description: "{{ doc('col_end_lat')}}"
+          - name: end_lng
+            description: "{{ doc('col_end_lng')}}"
+          - name: member_casual
+            description: "{{ doc('col_member_casual')}}"
+      - name: 202112_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
           - name: ride_id

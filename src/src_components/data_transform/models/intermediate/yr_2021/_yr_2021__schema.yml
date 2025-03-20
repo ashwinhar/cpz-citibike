@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: jan_2020
+  - name: jan_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -30,7 +30,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: feb_2020
+  - name: feb_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -59,7 +59,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: mar_2020
+  - name: mar_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -88,7 +88,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: apr_2020
+  - name: apr_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -117,7 +117,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: may_2020
+  - name: may_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -146,7 +146,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: jun_2020
+  - name: jun_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -175,7 +175,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: jul_2020
+  - name: jul_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -204,7 +204,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: aug_2020
+  - name: aug_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -233,7 +233,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: sep_2020
+  - name: sep_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -262,7 +262,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: oct_2020
+  - name: oct_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -291,7 +291,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: nov_2020
+  - name: nov_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -320,7 +320,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: dec_2020
+  - name: dec_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -349,7 +349,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: full_year_2020
+  - name: full_year_2021
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
@@ -378,6 +378,9 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
+  
+  
+  
   
   
   
