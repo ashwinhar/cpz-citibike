@@ -349,7 +349,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-  - name: full_year_2024
+  - name: yr_2024
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
       - name: ride_id
