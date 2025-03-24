@@ -10,3 +10,4 @@ src/src_components/logs/dbt.log
 src/src_components/data_transform/dev.duckdb
 src/src_components/data_transform/dev.duckdb.wal
 src/src_components/data_load/start_station_names.csv
+nbs/eda.ipynb
