@@ -40,6 +40,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202201_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -74,6 +77,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202202_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -108,6 +114,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202202_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -142,6 +151,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202203_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -176,6 +188,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202203_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -210,6 +225,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202204_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -244,6 +262,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202204_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -278,6 +299,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202204_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -312,6 +336,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202205_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -346,6 +373,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202205_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -380,6 +410,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202205_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -414,6 +447,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202206_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -448,6 +484,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202206_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -482,6 +521,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202206_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -516,6 +558,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202206_citibike_tripdata_4
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -550,6 +595,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202207_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -584,6 +632,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202207_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -618,6 +669,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202207_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -652,6 +706,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202207_citibike_tripdata_4
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -686,6 +743,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202208_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -720,6 +780,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202208_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -754,6 +817,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202208_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -788,6 +854,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202208_citibike_tripdata_4
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -822,6 +891,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202209_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -856,6 +928,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202209_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -890,6 +965,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202209_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -924,6 +1002,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202209_citibike_tripdata_4
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -958,6 +1039,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202210_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -992,6 +1076,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202210_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -1026,6 +1113,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202210_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -1060,6 +1150,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202211_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -1094,6 +1187,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202211_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -1128,6 +1224,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202211_citibike_tripdata_3
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -1162,6 +1261,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202212_citibike_tripdata_1
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -1196,6 +1298,9 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
       - name: 202212_citibike_tripdata_2
         description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
         columns:
@@ -1230,3 +1335,6 @@ sources:
             description: "{{ doc('col_end_lng')}}"
           - name: member_casual
             description: "{{ doc('col_member_casual')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['member', 'casual']
