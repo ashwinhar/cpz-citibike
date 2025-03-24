@@ -11,8 +11,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -40,8 +45,15 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -69,8 +81,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -98,8 +115,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -127,8 +149,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -156,8 +183,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -185,8 +217,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -214,8 +251,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -243,8 +285,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -272,8 +319,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -301,8 +353,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -330,8 +387,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -359,8 +421,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -388,8 +455,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -417,8 +489,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -446,8 +523,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -475,8 +557,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -504,8 +591,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -533,8 +625,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -562,8 +659,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -591,8 +693,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -620,8 +727,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -649,8 +761,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -678,8 +795,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -707,8 +829,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -736,8 +863,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -765,8 +897,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -794,8 +931,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -823,8 +965,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -852,8 +999,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -881,8 +1033,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -910,8 +1067,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -939,8 +1101,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -968,8 +1135,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -997,8 +1169,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -1026,8 +1203,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -1055,8 +1237,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -1084,8 +1271,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -1113,8 +1305,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -1142,8 +1339,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -1171,8 +1373,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
@@ -1200,8 +1407,13 @@ sources:
         columns:
           - name: ride_id
             description: "{{ doc('col_ride_id')}}"
+            data_tests:
+              - unique
           - name: rideable_type
             description: "{{ doc('col_rideable_type')}}"
+            data_tests:
+              - accepted_values:
+                  values: ['electric_bike', 'classic_bike']
           - name: started_at
             description: "{{ doc('col_started_at')}}"
           - name: ended_at
