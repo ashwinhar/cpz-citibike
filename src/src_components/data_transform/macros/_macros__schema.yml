@@ -1,0 +1,9 @@
+version: 2
+
+macros:
+  - name: format_date
+    description: Convert string to timestamp, and format to "second" precision. 
+    arguments:
+      - name: column_name
+        type: string
+        description: The column you want to convert to timestamp. Must be in this format - '%Y-%m-%d %H:%M:%S.%f'
