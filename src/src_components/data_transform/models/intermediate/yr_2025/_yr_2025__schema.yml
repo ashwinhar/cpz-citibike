@@ -12,6 +12,9 @@ models:
         description: "{{ doc('col_started_at')}}"
       - name: ended_at
         description: "{{ doc('col_ended_at')}}"
+        tests:
+          - validate_month:
+              month_idx: 1
       - name: start_station_name
         description: "{{ doc('col_start_station_name')}}"
       - name: start_station_id
@@ -41,6 +44,9 @@ models:
         description: "{{ doc('col_started_at')}}"
       - name: ended_at
         description: "{{ doc('col_ended_at')}}"
+        tests:
+          - validate_month:
+              month_idx: 2
       - name: start_station_name
         description: "{{ doc('col_start_station_name')}}"
       - name: start_station_id
