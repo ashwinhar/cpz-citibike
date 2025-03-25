@@ -1,14 +1,17 @@
 version: 2
 data_tests:
   - name: validate_month
-    description: Ensure that all records belong to the appropriate month
+    description: Ensure that for every record, one of two timestamp columns falls within `month_idx`
     arguments:
       - name: model
         type: string
         description: Model name
-      - name: column_name
+      - name: started_at_col
         type: string
-        description: Column name, shouldn't be empty
+        description: 
+      - name: ended_at_col
+        type: string
+        description:
       - name: month_idx
         type: integer
         description: Index of month to check against. For example if you want all records to be in January, pass "1". 

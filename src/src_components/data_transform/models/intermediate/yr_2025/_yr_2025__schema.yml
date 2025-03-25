@@ -12,9 +12,6 @@ models:
         description: "{{ doc('col_started_at')}}"
       - name: ended_at
         description: "{{ doc('col_ended_at')}}"
-        tests:
-          - validate_month:
-              month_idx: 1
       - name: start_station_name
         description: "{{ doc('col_start_station_name')}}"
       - name: start_station_id
@@ -33,6 +30,11 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
+    tests:
+      - validate_month:
+          started_at_col: started_at
+          ended_at_col: ended_at
+          month_idx: 1
   - name: feb_2025
     description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
     columns:
@@ -44,9 +46,6 @@ models:
         description: "{{ doc('col_started_at')}}"
       - name: ended_at
         description: "{{ doc('col_ended_at')}}"
-        tests:
-          - validate_month:
-              month_idx: 2
       - name: start_station_name
         description: "{{ doc('col_start_station_name')}}"
       - name: start_station_id
@@ -65,3 +64,8 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
+    tests:
+      - validate_month:
+          started_at_col: started_at
+          ended_at_col: ended_at
+          month_idx: 2

@@ -13,11 +13,13 @@ An enum, describing whether the bike was electric or acoustic
 {% docs col_started_at %}
 The timestamp for when the ride started, presumably in EST (but CitiBike does not provide a data dictionary, so this is conjecture). 
 For a month-specific table, can belong to the previous month as long as `ended_at` is in the appropriate month. For example, in `jan_2025`, 
-several records have `month(started_at) = 12` (December), but their `month(ended_at)` is always `1`.
+several records have `month(started_at) = 12` (December), but the `month(ended_at)` for those records is `1`.
 {% enddocs %}
 
 {% docs col_ended_at %}
-The timestamp for when the ride started, presumably in EST (but CitiBike does not provide a data dictionary, so this is conjecture)
+The timestamp for when the ride started, presumably in EST (but CitiBike does not provide a data dictionary, so this is conjecture).
+For a month-specific table, can belong to the following month as long as `started_at` is in the appropriate month. For example, in `may_2024`, 
+several records have `month(ended_at) = 6` (June), but the `month(started_at)` for those records is `5`.
 {% enddocs %}
 
 {% docs col_start_station_name %}
