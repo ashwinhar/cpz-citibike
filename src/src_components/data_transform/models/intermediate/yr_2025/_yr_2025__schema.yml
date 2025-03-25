@@ -30,7 +30,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-    tests:
+    data_tests:
       - validate_month:
           started_at_col: started_at
           ended_at_col: ended_at
@@ -64,7 +64,7 @@ models:
         description: "{{ doc('col_end_lng')}}"
       - name: member_casual
         description: "{{ doc('col_member_casual')}}"
-    tests:
+    data_tests:
       - validate_month:
           started_at_col: started_at
           ended_at_col: ended_at
