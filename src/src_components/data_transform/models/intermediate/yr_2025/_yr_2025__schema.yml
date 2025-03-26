@@ -3,6 +3,8 @@ version: 2
 models:
   - name: jan_2025
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -46,6 +48,8 @@ models:
       - unique_station_id
   - name: feb_2025
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -88,6 +92,8 @@ models:
           month_idx: 2
   - name: yr_2025
     description: "{{ doc('tbl_year_description')}}"
+    config:
+      tags: ['year']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"

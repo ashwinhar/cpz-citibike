@@ -3,6 +3,8 @@ version: 2
 models:
   - name: jan_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -45,6 +47,8 @@ models:
           month_idx: 1
   - name: feb_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -87,6 +91,8 @@ models:
           month_idx: 2
   - name: mar_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -129,6 +135,8 @@ models:
           month_idx: 3
   - name: apr_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -171,6 +179,8 @@ models:
           month_idx: 4
   - name: may_2024
     description: "{{ doc('may_2024_description') }}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -213,6 +223,8 @@ models:
           month_idx: 5
   - name: jun_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -255,6 +267,8 @@ models:
           month_idx: 6
   - name: jul_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -297,6 +311,8 @@ models:
           month_idx: 7
   - name: aug_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -339,6 +355,8 @@ models:
           month_idx: 8
   - name: sep_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -381,6 +399,8 @@ models:
           month_idx: 9
   - name: oct_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -423,6 +443,8 @@ models:
           month_idx: 10
   - name: nov_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -465,6 +487,8 @@ models:
           month_idx: 11
   - name: dec_2024
     description: "{{ doc('tbl_month_year_description')}}"
+    config:
+      tags: ['month']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -507,6 +531,8 @@ models:
           month_idx: 12
   - name: yr_2024
     description: "{{ doc('tbl_year_description')}}"
+    config:
+      tags: ['year']
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
