@@ -1,0 +1,3 @@
+{% docs macros_create_station_groups_description %}
+Pass in either 'start' or 'end' to parameter `start_or_end`. The macro will create distinct groups of `<start_or_end>_station_id`, `<start_or_end>_station_name`, `<start_or_end>_station_latitude`, and `<start_or_end>_station_longitude`.  Additionally, it will round the latitude and longitude values to 6 decimal points to handle floating point errors. 
+{% enddocs %}

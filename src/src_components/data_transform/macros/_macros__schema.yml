@@ -7,3 +7,12 @@ macros:
       - name: column_name
         type: string
         description: The column you want to convert to timestamp. Must be in this format - '%Y-%m-%d %H:%M:%S.%f'
+  - name: create_station_groups
+    description: "{{ doc('macros_create_station_groups_description')}}"
+    arguments:
+      - name: model
+        type: string
+        description: Target model to find distinct station groups 
+      - name: start_or_end
+        type: string
+        description: Either 'start' or 'end'

@@ -1,6 +1,6 @@
 models:
   - name: combined_years
-    description: Data from all years
+    description: Ridership data from all years
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"

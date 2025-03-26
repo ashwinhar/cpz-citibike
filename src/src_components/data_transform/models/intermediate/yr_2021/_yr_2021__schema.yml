@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: jan_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -44,7 +44,7 @@ models:
           ended_at_col: ended_at
           month_idx: 1
   - name: feb_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -86,7 +86,7 @@ models:
           ended_at_col: ended_at
           month_idx: 2
   - name: mar_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -128,7 +128,7 @@ models:
           ended_at_col: ended_at
           month_idx: 3
   - name: apr_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -170,7 +170,7 @@ models:
           ended_at_col: ended_at
           month_idx: 4
   - name: may_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -212,7 +212,7 @@ models:
           ended_at_col: ended_at
           month_idx: 5
   - name: jun_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -254,7 +254,7 @@ models:
           ended_at_col: ended_at
           month_idx: 6
   - name: jul_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -296,7 +296,7 @@ models:
           ended_at_col: ended_at
           month_idx: 7
   - name: aug_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -338,7 +338,7 @@ models:
           ended_at_col: ended_at
           month_idx: 8
   - name: sep_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -380,7 +380,7 @@ models:
           ended_at_col: ended_at
           month_idx: 9
   - name: oct_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -422,7 +422,7 @@ models:
           ended_at_col: ended_at
           month_idx: 10
   - name: nov_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -464,7 +464,7 @@ models:
           ended_at_col: ended_at
           month_idx: 11
   - name: dec_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_month_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
@@ -506,7 +506,7 @@ models:
           ended_at_col: ended_at
           month_idx: 12
   - name: yr_2021
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('tbl_year_description')}}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
