@@ -24,3 +24,6 @@ select
     end_lng, 
     member_casual
 from cte
+where 
+    month({{ format_date('started_at') }}) = 5 and
+    month({{ format_date('ended_at')}}) = 5

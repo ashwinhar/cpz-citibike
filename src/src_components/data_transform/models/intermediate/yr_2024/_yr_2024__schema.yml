@@ -170,7 +170,7 @@ models:
           ended_at_col: ended_at
           month_idx: 4
   - name: may_2024
-    description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+    description: "{{ doc('may_2024_description') }}"
     columns:
       - name: ride_id
         description: "{{ doc('col_ride_id')}}"
