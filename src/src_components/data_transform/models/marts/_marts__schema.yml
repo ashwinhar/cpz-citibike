@@ -38,3 +38,17 @@ models:
         data_tests:
           - accepted_values:
               values: ['member', 'casual']
+  - name: fct_citibike_rides_by_year
+    description: Pivoted data from all years, grouping number of rides by start_station_id and year.
+    columns:
+      - name: start_station_id
+        description: "{{ doc('col_start_station_id')}}"
+      - name: start_station_name
+        description: "{{ doc('col_start_station_name')}}"
+      - name: '2019'
+      - name: '2020'
+      - name: '2021'
+      - name: '2022'  
+      - name: '2023'
+      - name: '2024'
+      - name: '2025'
