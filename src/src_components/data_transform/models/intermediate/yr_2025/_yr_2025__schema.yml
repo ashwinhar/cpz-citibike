@@ -45,7 +45,6 @@ models:
           started_at_col: started_at
           ended_at_col: ended_at
           month_idx: 1
-      - unique_station_id
   - name: feb_2025
     description: "{{ doc('tbl_month_year_description')}}"
     config:

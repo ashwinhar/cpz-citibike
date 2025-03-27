@@ -3,5 +3,5 @@ Combines data from all relevant staging files. Specifically if the table is mm_y
 {% enddocs %}
 
 {% docs tbl_year_description %}
-Combines data from all relevant month tables. For example `yr_2020` contains data from all tables matching `mmm_2020`. 
+Combines data from all relevant month tables. For example `yr_2020` contains data from all tables matching `mmm_2020`. Year tables also use the macro `remove_unwanted_station_ids`. Read the macro documentation for more info. 
 {% enddocs %}
