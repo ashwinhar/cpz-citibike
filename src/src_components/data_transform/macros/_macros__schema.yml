@@ -8,7 +8,7 @@ macros:
         type: string
         description: The column you want to convert to timestamp. Must be in this format - '%Y-%m-%d %H:%M:%S.%f'
   - name: create_station_groups
-    description: "{{ doc('macros_create_station_groups_description')}}"
+    description: "{{ doc('macros_create_station_groups_description') }}"
     arguments:
       - name: model
         type: string
@@ -16,3 +16,9 @@ macros:
       - name: start_or_end
         type: string
         description: Either 'start' or 'end'
+  - name: remove_unwanted_station_ids
+    description: "{{ doc('macros_remove_unwanted_station_ids') }}"
+    arguments:
+      - name: column_name
+        type: string
+        description: Column to apply the remove condition, must be <some_string>_station_id
