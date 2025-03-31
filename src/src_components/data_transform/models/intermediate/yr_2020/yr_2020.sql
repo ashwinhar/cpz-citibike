@@ -24,4 +24,4 @@ with cte as (
     select * from {{ref ("dec_2020")}}
 )
 select * from cte
-{{ remove_unwanted_station_ids('start_station_id')}}
+{{ remove_unwanted_station_ids() }}
