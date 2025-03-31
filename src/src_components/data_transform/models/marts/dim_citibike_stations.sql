@@ -2,9 +2,10 @@ with selected_name as (
     select
         citibike_station_id,
         first(citibike_station_name) as citibike_station_name
-    from {{ ref('station_geographies')}}
+    from {{ ref('station_geographies') }}
     group by citibike_station_id
 )
+
 select
     sn.*,
     sic.in_cpz
