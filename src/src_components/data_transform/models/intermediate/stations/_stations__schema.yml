@@ -1,0 +1,19 @@
+models:
+  - name: station_geographies
+    description: "{{doc('tbl_station_geographies')}}"
+    columns:
+      - name: citibike_station_id
+        description: "{{doc('col_station_id')}}"
+      - name: citibike_station_name
+        description: "{{doc('col_station_name')}}"
+      - name: station_latitude
+        description: "{{doc('col_station_latitude')}}"
+      - name: station_longitude
+        description: "{{doc('col_station_longitude')}}"
+  - name: station_in_cpz
+    description: "{{doc('tbl_station_in_cpz')}}"
+    columns:
+      - name: citibike_station_id
+        description: "{{doc('col_station_id')}}"
+      - name: in_cpz
+        description: "{{doc('col_in_cpz')}}"
