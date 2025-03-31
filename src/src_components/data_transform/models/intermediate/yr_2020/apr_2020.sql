@@ -1,6 +1,6 @@
 with cte as (
-    select * from 
-    {{ source('staging_2020', '202004_citibike_tripdata_1') }} 
+    select * from
+        {{ source('staging_2020', '202004_citibike_tripdata_1') }}
 )
 select
     ride_id,

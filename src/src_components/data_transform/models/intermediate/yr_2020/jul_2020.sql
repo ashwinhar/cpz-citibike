@@ -1,10 +1,12 @@
 with cte as (
-    select * from 
-    {{ source('staging_2020', '202007_citibike_tripdata_1') }} 
-    UNION ALL 
-    select * from {{ source('staging_2020', '202007_citibike_tripdata_2') }}
-    UNION ALL 
-    select * from {{ source('staging_2020', '202007_citibike_tripdata_3') }}
+    select * from
+        {{ source('staging_2020', '202007_citibike_tripdata_1') }}
+    union all
+    select * from
+        {{ source('staging_2020', '202007_citibike_tripdata_2') }}
+    union all
+    select * from
+        {{ source('staging_2020', '202007_citibike_tripdata_3') }}
 )
 select
     ride_id,
@@ -18,6 +20,6 @@ select
     start_lat,
     start_lng,
     end_lat,
-    end_lng, 
+    end_lng,
     member_casual
 from cte
