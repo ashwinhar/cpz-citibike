@@ -12,12 +12,10 @@ It will also use the raw data to create fact tables within the DuckDB database f
 4. Run `conda activate cpz-citibike` if the conda enviornment hasn't been activated yet
 5. Run `pip install -e .` inside the conda environment
 6. Navigate to `src/src_components/data_transform/` and make sure there is a `dev.duckdb` file. If there isn't, make a new empty file with that name. 
-7. Run `dbt run`
-8. If you want to re-generate documentation, you should run `dbt docs generate` and then `dbt docs serve`. Remember that any commands that start with `dbt` should be run within `src/src_components/data_transform/`. 
 
-You can now use `nbs/eda.ipynb` to access the database, either via SQL or Python. 
+Follow the ELT steps below to use `nbs/eda.ipynb` to access the database, either via SQL or Python. 
 
-## Extracting Data
+## Extracting data (**E**LT)
 Navigate to `nbs/data_extraction.ipynb` within VSCode. Data extraction uses a "driver" function called `download_files` which will download all relevant files that don't currently exist within your `data/raw_citibike_data/` directory. 
 
 Any constants that are listed below will be defined in `src/src_constants/extract_constants.py`. Run the notebook cells *one-by-one*. All the stages are explained below, but the notebook run is very easy. You should only need to manually intervene **once**. 
@@ -59,7 +57,7 @@ data/raw_citibike_data/
 │   │   └── ...
 ```
 
-## Loading data
+## Loading data (E**L**T)
 Navigate to `nbs/data_load.ipynb`
 
 ### Stage 1: Create staging tables that don't already exist
@@ -67,3 +65,68 @@ Navigate to `nbs/data_load.ipynb`
 
 ### Stage 2: Load geojson
 Transportation Alternatives has provided a geojson that defines the Congestion Pricing zone. That file is available in `configs/`. Run `create_polygon` to load this polygon into the database.
+
+
+## Transforming data (EL**T**)
+Every time you onboard a new month of data, you will need to manually make some adjustments to the files within `src/src_components/data_transform/models/staging`. Automatically making these changes is too error-prone and unnecessary for this project.
+
+### How to onboard a new month of data
+
+First, navigate to the appropriate staging file in `src/src_components/data_transform/models/staging` that corresponds to the year the new month of data lives in. For example, when I want to onboard data for March 2025 I would navigate to `_staging_2025__sources.yml`. 
+
+Copy the most recent section of the file that starts with `- name: YYYYMM_citibike_tripdata` (it should be around 35 lines) and paste it directly below at *the same level*. For example, the bottom of my file might look like:
+
+```
+- name: 202502_citibike_tripdata_3
+  description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+  columns:
+    - name: ride_id
+    description: "{{ doc('col_ride_id')}}"
+    data_tests:
+        - unique
+    - name: rideable_type
+    description: "{{ doc('col_rideable_type')}}"
+    data_tests:
+        - accepted_values:
+            values: ['electric_bike', 'classic_bike']
+    ...
+```
+
+Now it should look like: 
+
+```
+- name: 202502_citibike_tripdata_3
+  description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+  columns:
+    - name: ride_id
+    description: "{{ doc('col_ride_id')}}"
+    data_tests:
+        - unique
+    - name: rideable_type
+    description: "{{ doc('col_rideable_type')}}"
+    data_tests:
+        - accepted_values:
+            values: ['electric_bike', 'classic_bike']
+    ...
+- name: 202502_citibike_tripdata_3 <-- MODIFY THIS NAME
+  description: "{{ doc('tbl_staging_XXXXXX_citibike_tripdata_X')}}"
+  columns:
+    - name: ride_id
+    description: "{{ doc('col_ride_id')}}"
+    data_tests:
+        - unique
+    - name: rideable_type
+    description: "{{ doc('col_rideable_type')}}"
+    data_tests:
+        - accepted_values:
+            values: ['electric_bike', 'classic_bike']
+    ...
+```
+
+You'll have to paste this code block for **as many new csv files you have downloaded and loaded to duckdb in the data_load.ipynb notebook**. Go to `data/raw_citibike_data/` if you're not sure. Modify the name to match the name of each one of the new .csv files without the file extension. For example, if I downloaded a new file called `202503-citibike-tripdata.csv` I should change the line indicated above to: 
+
+```
+- name: 202503_citibike_tripdata
+```
+
+### What to do if you are in a new year, and don't see the appropriate files
