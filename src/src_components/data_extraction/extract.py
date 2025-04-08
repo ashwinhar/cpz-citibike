@@ -21,19 +21,19 @@ from src_constants.extract_constants import (
 
 def get_existing_citibike_files(folder_path: str = RAW_DATA_FOLDER) -> list:
     """
-    Return list of existing data in folder_path
+    Return list of existing raw data (as .zip files) in folder_path
 
     Returns:
-        list of file paths
+        list of file names
     """
 
-    zip_files = [
-        f
-        for f in os.listdir(folder_path)
-        if os.path.isfile(os.path.join(folder_path, f)) and f.endswith(".zip")
-    ]
+    existing_files = []
+    for folder_path, _, files in os.walk(folder_path):
+        for file in files:
+            if file.endswith(".zip"):
+                existing_files.append(file)
 
-    return zip_files
+    return existing_files
 
 
 def find_all_downloadable_files(url: str = CITIBIKE_URL) -> list:
@@ -74,6 +74,9 @@ def find_files_of_interest(
     year_floor: int = 0,
 ) -> list:
     """Filter available zip files
+
+    CitiBike has ill-defined naming for the zip files that it uploads. This function
+    filters all the downloadable files in the website to just the ones we are interested in.
 
     Args:
         zip_links (list): List of all zip_links at CitiBike URL
@@ -144,13 +147,11 @@ def download_files(
 
     for file in files_to_download:
         file_download_path = CITIBIKE_URL_PREFIX + file
-        if file in downloadable_files and file not in existing_files:
-
+        if file_download_path in downloadable_files and file not in existing_files:
             save_path = os.path.join(RAW_DATA_FOLDER, file)
             print(f"Downloading {file_download_path} to {save_path}")
             download_citibike_file(file_download_path, save_path)
         else:
-
             if file not in downloadable_files:
                 print(f"{file} not available for download")
             elif file in existing_files:
