@@ -66,3 +66,4 @@ Navigate to `nbs/data_load.ipynb`
 `create_all_tables` will automatically skip creating tables that already exist. Simply run the cell. 
 
 ### Stage 2: Load geojson
+Transportation Alternatives has provided a geojson that defines the Congestion Pricing zone. That file is available in `configs/`. Run `create_polygon` to load this polygon into the database.

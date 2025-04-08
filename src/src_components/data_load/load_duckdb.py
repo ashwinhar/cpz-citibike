@@ -1,8 +1,10 @@
 """Module to load raw data into DuckDB database"""
 
 import os
+import json
 import duckdb
 import pandas as pd
+from shapely.geometry import shape
 from src_constants.load_constants import DATABASE_PATH
 from src_components.data_extraction.organize import find_month_folders
 
@@ -112,3 +114,31 @@ def create_all_tables() -> None:
                         "staging",
                         renamed_file,
                     )
+
+
+def create_polygon() -> None:
+    """
+    Create congestion pricing polygon from file created by Transportation Alternatives
+    """
+    geojson = None
+    with open("../../../configs/cpz_geojson/polygon-features.geojson") as f:
+        geojson = json.load(f)
+
+    with duckdb.connect(database=DATABASE_PATH) as conn:
+        print("Creating polygon")
+        conn.sql("INSTALL spatial; LOAD spatial;")
+        create_schema(conn, "utils")
+        conn.sql("CREATE OR REPLACE TABLE utils.cpz_polygons (geometry GEOMETRY);")
+
+        for feature in geojson["features"]:
+            # Convert GeoJSON to WKT format
+            shapely_geom = shape(feature["geometry"])
+            wkt = shapely_geom.wkt
+
+            # Insert into DuckDB table
+            conn.execute(
+                f"""
+                INSERT INTO utils.cpz_polygons 
+                VALUES (ST_GeomFromText('{wkt}'))
+            """
+            )
