@@ -4,6 +4,7 @@ src/cpz_citibike.egg-info
 *.pyc
 __pycache__/
 data/raw_citibike_data/*
+!data/raw_citibike_data/.gitkeep
 nbs/sandbox.ipynb
 sample_data
 src/src_components/logs/dbt.log
