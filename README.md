@@ -129,4 +129,38 @@ You'll have to paste this code block for **as many new csv files you have downlo
 - name: 202503_citibike_tripdata
 ```
 
+Next, navigate to `src/src_components/data_transform/models/intermediate`, specifically the appropriate year folder. In this example, it would be `yr_2025`. Duplicate any one of the files fitting the `mmm_YYYY.sql` format and rename it appropriately. For example, I can duplicate `feb_2025.sql` and rename to `mar_2025.sql`
+
+Modify this new file at the very top to match all the new sources you added to the staging file, making sure to `UNION ALL` every time. For example, let's say March 2025 actually had two files I added to the .yml file above called `202503_citibike_tripdata_1` and `202503_citibike_tripdata_2`: 
+
+```
+with cte as (
+    select * from {{ source('staging_2025', '202503_citibike_tripdata_1') }} 
+    UNION ALL 
+    select * from {{ source('staging_2025', '202503_citibike_tripdata_2') }} 
+)
+```
+
+Now, go to the appropriate "year" file that's in that same directory. In this example, it's `yr_2025`. Then, match the format at the top of the file to `UNION ALL` the new month file. For example, the top of the file would change from: 
+
+```
+with cte as (
+    select * from {{ref ("jan_2025")}}
+    UNION ALL
+    select * from {{ref ("feb_2025")}}
+)
+```
+to 
+```
+with cte as (
+    select * from {{ref ("jan_2025")}}
+    UNION ALL
+    select * from {{ref ("feb_2025")}}
+    UNION ALL 
+    select * from {{ref ("mar_2025")}}
+)
+```
+
+Finally, go to the `__schema.yml` file you see in the same directory. In this example, it would be `_yr_2025__schema.yml`. Copy-paste one of the month sections, and modify the name to match teh new month you onboarded. 
+
 ### What to do if you are in a new year, and don't see the appropriate files

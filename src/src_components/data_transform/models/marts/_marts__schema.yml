@@ -52,7 +52,6 @@ models:
       - name: start_station_id
         description: "{{ doc('col_start_station_id')}}"
         data_tests:
-          - unique
           - not_null
           - relationships:
               to: ref('dim_citibike_stations')
