@@ -58,3 +58,11 @@ data/raw_citibike_data/
 │   │   ├── YYYYMM-citibike-tripdata_2.csv
 │   │   └── ...
 ```
+
+## Loading data
+Navigate to `nbs/data_load.ipynb`
+
+### Stage 1: Create staging tables that don't already exist
+`create_all_tables` will automatically skip creating tables that already exist. Simply run the cell. 
+
+### Stage 2: Load geojson

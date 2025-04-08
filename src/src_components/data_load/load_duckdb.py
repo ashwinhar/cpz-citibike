@@ -22,7 +22,10 @@ def get_database_connection(
 
 
 def create_table(
-    db_conn: duckdb.DuckDBPyConnection, results_dataframe: pd.DataFrame, table_name: str
+    db_conn: duckdb.DuckDBPyConnection,
+    results_dataframe: pd.DataFrame,
+    schema_name: str,
+    table_name: str,
 ) -> None:
     """
     Create table in local DuckDB database
@@ -31,15 +34,27 @@ def create_table(
         db_conn - Connection to local DuckDB database. Typically
             returned by get_database_connection()
         results_dataframe - Dataframe to create. Typically returned by extract_dataset()
-        table_name - Full database object identifier
+        table_name - Database object identifier without schema
+        schema_name - Schema that you want the object to live in
 
     """
-    print(f"Creating {table_name}")
-    statement = (
-        f"CREATE TABLE IF NOT EXISTS {table_name} AS SELECT * FROM results_dataframe"
-    )
-    print(statement)
-    db_conn.sql(statement)
+    exists = db_conn.execute(
+        f"""
+        SELECT COUNT(*) 
+        FROM information_schema.tables 
+        WHERE table_schema = '{schema_name}' AND table_name = '{table_name}'
+    """
+    ).fetchone()[0]
+
+    if not exists:
+        print(
+            f"Table does not exist. Creating table with identifier {schema_name}.{table_name}"
+        )
+        full_identifier = f'{schema_name}."{table_name}"'
+        statement = f"CREATE TABLE IF NOT EXISTS {full_identifier} AS SELECT * FROM results_dataframe"
+        db_conn.sql(statement)
+    else:
+        print(f"Table with identifier {schema_name}.{table_name} already exists")
 
 
 def drop_table(db_conn: duckdb.DuckDBPyConnection, identifier: str) -> None:
@@ -90,9 +105,10 @@ def create_all_tables() -> None:
             for file in os.listdir(month):
                 if file.endswith(".csv"):
                     renamed_file = file.replace("-", "_").replace(".csv", "")
-                    print(f"Creating table {renamed_file}")
+                    print(f"Analyzing staging.{renamed_file}")
                     create_table(
                         con,
                         pd.read_csv(os.path.join(month, file)),
-                        f'staging."{renamed_file}"',
+                        "staging",
+                        renamed_file,
                     )
