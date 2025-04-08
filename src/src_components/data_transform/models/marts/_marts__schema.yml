@@ -46,8 +46,8 @@ models:
         data_tests:
           - accepted_values:
               values: ['member', 'casual']
-  - name: fct_citibike_rides_by_year
-    description: Pivoted data from all years, grouping number of rides by start_station_id and year.
+  - name: fct_citibike_rides_by_ym
+    description: "{{ doc('tbl_fct_citibike_rides_by_ym') }}"
     columns:
       - name: start_station_id
         description: "{{ doc('col_start_station_id')}}"
@@ -61,38 +61,423 @@ models:
         description: "{{ doc('col_start_station_name')}}"
       - name: in_cpz
         description: "{{ doc('col_in_cpz')}}"
-      - name: '2019'
-        description: Total count of rides for 2019
+      - name: '2019_1'
+        description: "{{ doc('col_YYYY_MM') }}"
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0 # (Optional)
-      - name: '2020'
-        description: Total count of rides for 2020
+      - name: '2019_2'
+        description: "{{ doc('col_YYYY_MM') }}"
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0 # (Optional)
-      - name: '2021'
-        description: Total count of rides for 2021
+      - name: '2019_3'
+        description: "{{ doc('col_YYYY_MM') }}"
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0 # (Optional)
-      - name: '2022'  
-        description: Total count of rides for 2022
+      - name: '2019_4'
+        description: "{{ doc('col_YYYY_MM') }}"
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0 # (Optional)
-      - name: '2023'
-        description: Total count of rides for 2023
+      - name: '2019_5'
+        description: "{{ doc('col_YYYY_MM') }}"
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0 # (Optional)
-      - name: '2024'
-        description: Total count of rides for 2024
+      - name: '2019_6'
+        description: "{{ doc('col_YYYY_MM') }}"
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0 # (Optional)
-      - name: '2025'
-        description: Total count of rides for 2025. Note that 2025 is not complete yet, and therefore a direct year-over-year comparison is misleading. 
+      - name: '2019_7'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2019_8'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2019_9'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2019_10'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2019_11'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2019_12'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_1'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_2'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_3'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_4'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_5'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_6'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_7'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_8'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_9'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_10'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_11'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2020_12'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_1'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_2'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_3'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_4'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_5'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_6'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_7'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_8'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_9'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_10'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_11'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2021_12'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_1'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_2'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_3'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_4'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_5'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_6'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_7'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_8'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_9'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_10'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_11'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2022_12'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_1'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_2'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_3'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_4'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_5'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_6'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_7'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_8'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_9'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_10'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_11'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2023_12'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_1'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_2'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_3'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_4'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_5'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_6'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_7'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_8'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_9'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_10'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_11'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2024_12'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_1'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_2'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_3'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_4'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_5'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_6'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_7'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_8'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_9'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_10'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_11'
+        description: "{{ doc('col_YYYY_MM') }}"
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0 # (Optional)
+      - name: '2025_12'
+        description: "{{ doc('col_YYYY_MM') }}"
         data_tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0 # (Optional)
