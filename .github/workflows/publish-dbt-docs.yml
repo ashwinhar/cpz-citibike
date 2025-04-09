@@ -22,7 +22,7 @@ jobs:
 
       - name: "Step 04 - Generate dbt docs"
         id: step-04
-        working-directory: ./dbt-docs/dbt
+        working-directory: ./src/src_components/data_transform
         run: |
           cd target
           mkdir -p ${{ github.workspace }}/docs
