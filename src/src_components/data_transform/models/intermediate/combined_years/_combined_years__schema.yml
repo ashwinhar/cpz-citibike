@@ -40,3 +40,6 @@ models:
       - validate_2020_data
       - validate_2021_data
       - validate_2022_data
+      - validate_2023_data
+      - validate_2024_data
+      - validate_2025_data

@@ -50,6 +50,9 @@ models:
       - validate_2020_data
       - validate_2021_data
       - validate_2022_data
+      - validate_2023_data
+      - validate_2024_data
+      - validate_2025_data
   - name: fct_citibike_rides_by_ym
     description: "{{ doc('tbl_fct_citibike_rides_by_ym') }}"
     columns:

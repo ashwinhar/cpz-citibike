@@ -33,3 +33,21 @@ data_tests:
       - name: model
         type: string
         description: Model name
+  - name: validate_2023_data
+    description: "{{ doc('test_validate_YYYY_data') }}"
+    arguments:
+      - name: model
+        type: string
+        description: Model name
+  - name: validate_2024_data
+    description: "{{ doc('test_validate_YYYY_data_V2') }}"
+    arguments:
+      - name: model
+        type: string
+        description: Model name
+  - name: validate_2025_data
+    description: "{{ doc('test_validate_YYYY_data_V2') }}"
+    arguments:
+      - name: model
+        type: string
+        description: Model name
