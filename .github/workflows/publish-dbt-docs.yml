@@ -41,7 +41,7 @@ jobs:
 
       - name: "Step 07 - Upload artifact for deployment job"
         id: step-07
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4 # Ensure this matches the correct version
         with:
           name: docs
           path: docs.zip
