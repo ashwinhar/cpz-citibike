@@ -36,3 +36,7 @@ models:
         data_tests:
           - accepted_values:
               values: ['member', 'casual']
+    data_tests:
+      - validate_2020_data
+      - validate_2021_data
+      - validate_2022_data
