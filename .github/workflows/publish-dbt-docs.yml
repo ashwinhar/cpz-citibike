@@ -24,6 +24,7 @@ jobs:
         id: step-04
         working-directory: ./src/src_components/data_transform
         run: |
+          ls
           cd target
           mkdir -p ${{ github.workspace }}/docs
           cp *.json *.html graph.gpickle ${{ github.workspace }}/docs
