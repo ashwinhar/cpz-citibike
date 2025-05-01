@@ -12,6 +12,7 @@ It will also use the raw data to create fact tables within the DuckDB database f
 4. Run `conda activate cpz-citibike` if the conda enviornment hasn't been activated yet
 5. Run `pip install -e .` inside the conda environment
 6. Navigate to `src/src_components/data_transform/` and make sure there is a `dev.duckdb` file. If there isn't, make a new empty file with that name. 
+7. Modify `PARENT_DIR` in `src/src_constants/extract_constants.py` to match the root directory of your repo. 
 
 Follow the ELT steps below to use `nbs/eda.ipynb` to access the database, either via SQL or Python. 
 

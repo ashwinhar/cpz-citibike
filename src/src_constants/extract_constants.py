@@ -4,7 +4,7 @@ import os
 
 CITIBIKE_URL_PREFIX = "https://s3.amazonaws.com/tripdata/"
 CITIBIKE_URL = CITIBIKE_URL_PREFIX + "index.html"
-PARENT_DIR = os.path.abspath("/Users/ashwin/Desktop/cpz_citibike/")
+PARENT_DIR = os.path.abspath("/Users/Ashwin/Desktop/repos/cpz-citibike/")
 RAW_DATA_FOLDER = os.path.join(PARENT_DIR, "data/raw_citibike_data")
 # TODO: Change this to a relative path
 RE_PATTERN = (
