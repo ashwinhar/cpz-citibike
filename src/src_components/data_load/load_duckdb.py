@@ -5,7 +5,7 @@ import json
 import duckdb
 import pandas as pd
 from shapely.geometry import shape
-from src_constants.load_constants import DATABASE_PATH
+from src_constants.load_constants import DATABASE_PATH, POLYGON_PATH
 from src_components.data_extraction.organize import find_month_folders
 
 
@@ -121,7 +121,7 @@ def create_polygon() -> None:
     Create congestion pricing polygon from file created by Transportation Alternatives
     """
     geojson = None
-    with open("../../../configs/cpz_geojson/polygon-features.geojson") as f:
+    with open(POLYGON_PATH) as f:
         geojson = json.load(f)
 
     with duckdb.connect(database=DATABASE_PATH) as conn:

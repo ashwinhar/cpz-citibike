@@ -13,6 +13,7 @@ It will also use the raw data to create fact tables within the DuckDB database f
 5. Run `pip install -e .` inside the conda environment
 6. Modify `PARENT_DIR` in `src/src_constants/extract_constants.py` to match the root directory of your repo.
 7. Modify `DATABASE_PATH` in `src/src_constants/load_constants.py` appropriately. It should be `dev.duckdb` in wherever your `data_transform` directory is. 
+8. Modify `POLYGON_PATH` in `src/src_constants/load_constants.py`. It should be your root directory plus `configs/cpz_geojson/polygon-features.geojson`.
 
 Follow the ELT steps below to use `nbs/eda.ipynb` to access the database, either via SQL or Python. 
 
