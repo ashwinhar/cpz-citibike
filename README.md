@@ -163,6 +163,9 @@ with cte as (
 )
 ```
 
-Finally, go to the `__schema.yml` file you see in the same directory. In this example, it would be `_yr_2025__schema.yml`. Copy-paste one of the month sections, and modify the name to match teh new month you onboarded. 
+Finally, go to the `__schema.yml` file you see in the same directory. In this example, it would be `_yr_2025__schema.yml`. Copy-paste one of the month sections, and modify the name to match the new month you onboarded. 
+
+### Build models
+Execute `dbt run` in the terminal while in the `data_transform` directory.
 
 ### What to do if you are in a new year, and don't see the appropriate files
