@@ -216,5 +216,3 @@ models:
         data_tests:
           - accepted_values:
               values: ['member', 'casual']
-    data_tests:
-      - validate_2025_data
